@@ -6,13 +6,13 @@
 /*   By: mathispeyre <mathispeyre@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 11:58:52 by mathispeyre       #+#    #+#             */
-/*   Updated: 2024/11/26 11:35:15 by mathispeyre      ###   ########.fr       */
+/*   Updated: 2024/11/26 13:36:42 by mathispeyre      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../ft_printf.h"
 
-static int	hexlen(unsigned int nb)
+int	ft_hexlen(unsigned int nb)
 {
 	int	result;
 
@@ -27,26 +27,26 @@ static int	hexlen(unsigned int nb)
 	return (result);
 }
 
-void	print_hexlower(unsigned int nb)
+void	ft_print_hexlower(unsigned int nb)
 {
 	char	c;
 	char	*hex_base;
 
 	hex_base = "0123456789abcdef";
 	if (nb > 15)
-		print_hexlower(nb / 16);
+		ft_print_hexlower(nb / 16);
 	c = hex_base[nb % 16];
 	ft_putchar_fd(c, 1);
 }
 
-void	print_hexupper(unsigned int nb)
+void	ft_print_hexupper(unsigned int nb)
 {
 	char	c;
 	char	*hex_base;
 
 	hex_base = "0123456789ABCDEF";
 	if (nb > 15)
-		print_hexupper(nb / 16);
+		ft_print_hexupper(nb / 16);
 	c = hex_base[nb % 16];
 	ft_putchar_fd(c, 1);
 }
@@ -55,13 +55,13 @@ int	hexhub(unsigned int nb, char type)
 {
 	if (type == 'x')
 	{
-		print_hexlower(nb);
-		return (hexlen(nb));
+		ft_print_hexlower(nb);
+		return (ft_hexlen(nb));
 	}
 	else if (type == 'X')
 	{
-		print_hexupper(nb);
-		return (hexlen(nb));
+		ft_print_hexupper(nb);
+		return (ft_hexlen(nb));
 	}
 	return (0);
 }

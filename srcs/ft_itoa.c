@@ -6,13 +6,13 @@
 /*   By: mathispeyre <mathispeyre@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 17:45:30 by mathispeyre       #+#    #+#             */
-/*   Updated: 2024/11/26 11:32:33 by mathispeyre      ###   ########.fr       */
+/*   Updated: 2024/11/26 13:33:53 by mathispeyre      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-static size_t	ft_intlen(int n)
+size_t	ft_intlen(int n)
 {
 	size_t	len;
 

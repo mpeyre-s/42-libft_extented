@@ -6,28 +6,13 @@
 /*   By: mathispeyre <mathispeyre@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 11:31:23 by mathispeyre       #+#    #+#             */
-/*   Updated: 2024/11/26 11:35:21 by mathispeyre      ###   ########.fr       */
+/*   Updated: 2024/11/26 13:39:14 by mathispeyre      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../ft_printf.h"
 
-static size_t	ft_intlen(int n)
-{
-	size_t	len;
-
-	len = 0;
-	if (n <= 0)
-		len++;
-	while (n != 0)
-	{
-		n /= 10;
-		len++;
-	}
-	return (len);
-}
-
-static size_t	ft_uintlen(unsigned int n)
+size_t	ft_uintlen(unsigned int n)
 {
 	size_t	len;
 
@@ -42,7 +27,7 @@ static size_t	ft_uintlen(unsigned int n)
 	return (len);
 }
 
-static void	ft_putunsignednbr_fd(unsigned int n, int fd)
+void	ft_putunsignednbr_fd(unsigned int n, int fd)
 {
 	char	c;
 

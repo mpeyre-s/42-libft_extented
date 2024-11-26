@@ -6,13 +6,13 @@
 /*   By: mathispeyre <mathispeyre@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 09:37:58 by mathispeyre       #+#    #+#             */
-/*   Updated: 2024/11/26 11:35:11 by mathispeyre      ###   ########.fr       */
+/*   Updated: 2024/11/26 12:30:57 by mathispeyre      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../ft_printf.h"
 
-int	printhub(char type, va_list parameters)
+static int	printhub(char type, va_list parameters)
 {
 	if (type == 'c')
 		return (print_char(va_arg(parameters, int)));
