@@ -6,7 +6,7 @@
 /*   By: mathispeyre <mathispeyre@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 18:04:22 by mathispeyre       #+#    #+#             */
-/*   Updated: 2024/12/15 18:06:55 by mathispeyre      ###   ########.fr       */
+/*   Updated: 2024/12/15 18:16:22 by mathispeyre      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,9 @@ static size_t	parse_fraction_part(const char *str, double *result)
 {
 	double	fraction;
 	size_t	i;
-	size_t	frac_index;
 
 	fraction = 0.0;
 	i = 0;
-	frac_index = 0;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		fraction = fraction * 10.0 + (str[i] - '0');
